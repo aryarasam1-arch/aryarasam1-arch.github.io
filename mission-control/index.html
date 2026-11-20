@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>HERMES BIZ — Mission Control</title>
+<link rel="stylesheet" href="styles.css">
+</head><body>
+<header>
+  <div class="brand">◇ HERMES BIZ <span>// MISSION CONTROL</span></div>
+  <div class="header-right">
+    <span id="clock" class="clock"></span>
+    <span id="gen" class="gen">loading…</span>
+    <button id="refresh">↻ Refresh</button>
+  </div>
+</header>
+
+<nav id="tabs">
+  <button data-tab="overview" class="on">Overview</button>
+  <button data-tab="agents">Agents</button>
+  <button data-tab="tasks">Tasks</button>
+  <button data-tab="activity">Activity</button>
+  <button data-tab="mind">Mindstream</button>
+  <button data-tab="systems">Systems</button>
+</nav>
+
+<main>
+<section id="tab-overview" class="on">
+  <div id="kpis" class="kpis"></div>
+  <h2>Agent status</h2><div id="ov-agents" class="cards"></div>
+  <div class="grid2">
+    <div><h2>Recent activity</h2><div id="ov-events" class="feed"></div></div>
+    <div><h2>Systems &amp; pipeline</h2><div id="ov-systems" class="panel"></div></div>
+  </div>
+</section>
+
+<section id="tab-agents">
+  <h2>Four agents — live configuration &amp; observable activity</h2>
+  <p class="note" id="honesty"></p>
+  <div id="agent-detail" class="cards-wide"></div>
+</section>
+
+<section id="tab-tasks">
+  <div class="toolbar"><input id="task-search" placeholder="Search tasks…">
+    <select id="task-agent"><option value="">All agents</option></select>
+    <select id="task-status"><option value="">All statuses</option></select>
+  </div>
+  <div id="tasks-table" class="table-wrap"></div>
+</section>
+
+<section id="tab-activity">
+  <div class="toolbar"><input id="feed-search" placeholder="Filter events / comments…"></div>
+  <h2>Kanban events</h2><div id="all-events" class="feed"></div>
+  <h2>CEO / agent reviews &amp; comments</h2><div id="all-comments" class="feed"></div>
+</section>
+
+<section id="tab-mind">
+  <p class="note">This panel shows <b>observable agent output</b>: task result summaries, review comments and log events. It does not — and cannot — expose private model chain-of-thought. Nothing here is invented.</p>
+  <div id="mindstream" class="cards-wide"></div>
+</section>
+
+<section id="tab-systems">
+  <div class="grid2">
+    <div><h2>Gateway &amp; cron</h2><div id="sys-gateway" class="panel"></div></div>
+    <div><h2>Endpoints</h2><div id="sys-endpoints" class="panel"></div></div>
+    <div><h2>Providers &amp; keys</h2><div id="sys-providers" class="panel"></div></div>
+    <div><h2>Finance</h2><div id="sys-finance" class="panel"></div></div>
+  </div>
+  <h2>Business files</h2><div id="sys-files" class="table-wrap"></div>
+</section>
+</main>
+<script src="app.js"></script>
+</body></html>

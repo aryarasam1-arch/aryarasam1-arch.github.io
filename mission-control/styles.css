@@ -1,0 +1,40 @@
+:root{--bg:#0a0d12;--panel:#121821;--panel2:#18212d;--line:#25303f;--ink:#e8eef7;--muted:#94a3b8;--green:#5fd38d;--yellow:#e0b25c;--red:#e07a7a;--blue:#7aa2f7;--violet:#bb9af7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 ui-sans-serif,system-ui,"Segoe UI",sans-serif;padding-bottom:60px}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;border-bottom:1px solid var(--line);background:var(--panel);position:sticky;top:0;z-index:5;gap:12px}
+.brand{font-weight:700;font-size:17px;letter-spacing:.02em}.brand span{color:var(--muted);font-weight:500;font-size:12px}
+.header-right{display:flex;align-items:center;gap:14px}.clock,.gen{color:var(--muted);font-size:12px}
+button,.toolbar input,.toolbar select{background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:7px 12px;font:inherit;cursor:pointer}
+button:hover{border-color:var(--blue)}
+nav{display:flex;gap:4px;padding:10px 24px;border-bottom:1px solid var(--line);background:var(--panel);flex-wrap:wrap}
+nav button{border:1px solid transparent;background:transparent;color:var(--muted)}
+nav button.on{color:var(--ink);background:var(--panel2);border-color:var(--line)}
+main{padding:22px 24px;max-width:1500px;margin:0 auto}
+section{display:none}section.on{display:block}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:24px 0 12px}
+h2:first-child{margin-top:0}
+.note{color:var(--muted);font-size:12px;margin:0 0 16px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+.kpi b{display:block;font-size:28px;font-weight:650}.kpi span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.cards,.cards-wide{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;overflow:hidden}
+.card h3{margin:0 0 6px;font-size:16px}.card .sub{color:var(--muted);font-size:12px}
+.tag{display:inline-block;padding:2px 8px;border:1px solid var(--line);border-radius:99px;font-size:11px;color:var(--muted);margin:2px 4px 2px 0}
+.tag.good{color:var(--green);border-color:#225b3b}.tag.bad{color:var(--red);border-color:#5a2b2b}.tag.warn{color:var(--yellow);border-color:#5a4a25}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:4px 10px;font-size:12px;margin:10px 0}.kv span:nth-child(odd){color:var(--muted)}
+pre.log{margin:8px 0 0;max-height:170px;overflow:auto;white-space:pre-wrap;word-break:break-word;background:#0c1118;border:1px solid var(--line);border-radius:8px;padding:10px;font:11px/1.5 ui-monospace,Consolas,monospace;color:#a9b8cc}
+.feed{background:var(--panel);border:1px solid var(--line);border-radius:12px;max-height:420px;overflow:auto}
+.item{padding:9px 14px;border-bottom:1px solid var(--line);font-size:12px;display:grid;grid-template-columns:150px 90px 1fr;gap:10px;align-items:start}
+.item:last-child{border-bottom:0}.item .t{color:var(--muted);font-family:ui-monospace,monospace;font-size:11px}
+.item .who{color:var(--blue)}.item .msg{word-break:break-word;white-space:pre-wrap}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:13px}
+.panel div{padding:5px 0;border-bottom:1px dashed var(--line)}.panel div:last-child{border:0}
+.toolbar{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.table-wrap{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:auto;max-height:640px}
+table{width:100%;border-collapse:collapse;font-size:12px}th,td{text-align:left;padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{position:sticky;top:0;background:var(--panel2);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+td.msg{max-width:620px;word-break:break-word;white-space:pre-wrap;color:#c8d3e2}
+.right{text-align:right}
+@media(max-width:700px){.item{grid-template-columns:1fr}header{flex-wrap:wrap}}
