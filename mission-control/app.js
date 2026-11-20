@@ -117,9 +117,15 @@ function filterFeed(){
 }
 async function load(){
   try{
-    const r = await fetch('snapshot.json?t='+Date.now());
+    let r = await fetch('/api/snapshot?t='+Date.now());
+    if(!r.ok || r.headers.get('content-type')?.includes('text/html')) throw new Error('no live API');
     S = await r.json(); renderAll();
-  }catch(e){ $('#gen').textContent = 'LOAD ERROR: '+e.message; }
+  }catch(e){
+    try{
+      const r = await fetch('snapshot.json?t='+Date.now());
+      S = await r.json(); renderAll();
+    }catch(e2){ $('#gen').textContent = 'LOAD ERROR: '+e2.message; }
+  }
 }
 document.querySelectorAll('#tabs button').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('#tabs button').forEach(x=>x.classList.remove('on'));
