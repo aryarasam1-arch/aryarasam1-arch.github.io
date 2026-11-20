@@ -116,16 +116,25 @@ function filterFeed(){
   renderFeed($('#all-comments'), S.board.comments.filter(f), commentRow);
 }
 async function load(){
-  try{
-    let r = await fetch('/api/snapshot?t='+Date.now());
-    if(!r.ok || r.headers.get('content-type')?.includes('text/html')) throw new Error('no live API');
-    S = await r.json(); renderAll();
-  }catch(e){
-    try{
-      const r = await fetch('snapshot.json?t='+Date.now());
-      S = await r.json(); renderAll();
-    }catch(e2){ $('#gen').textContent = 'LOAD ERROR: '+e2.message; }
+  const urls = [
+    ['/api/snapshot?t=', 'live API'],
+    ['snapshot.json?t=', 'local snapshot'],
+    ['https://aryarasam1-arch.github.io/mission-control/snapshot.json?t=', 'public mirror']
+  ];
+  for (const [base, source] of urls) {
+    try {
+      const r = await fetch(base + Date.now());
+      if (!r.ok) continue;
+      const ct = r.headers.get('content-type') || '';
+      if (!ct.includes('json')) continue;
+      S = await r.json();
+      renderAll();
+      $('#gen').textContent = 'Snapshot: ' + S.generated_at + (S.public_mode ? ' · public' : '') + ' · via ' + source;
+      return;
+    } catch (e) { /* try next source */ }
   }
+  if (S) { $('#gen').textContent = 'Offline — showing last loaded data'; }
+  else { $('#gen').textContent = 'LOAD ERROR: no data source reachable (local server offline + public mirror unreachable)'; }
 }
 document.querySelectorAll('#tabs button').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('#tabs button').forEach(x=>x.classList.remove('on'));
