@@ -13,8 +13,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Hermes Biz">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../../styles.css?v=1.0.4">
-<script src="../../app.js?v=1.0.4" defer></script>
+<link rel="stylesheet" href="../../styles.css?v=1.0.5">
+<script src="../../app.js?v=1.0.5" defer></script>
 </head>
 <body>
 <div class="demo-notice" role="note">Service catalog demo · illustrative content · no live bookings, no data saved.</div>
@@ -26,8 +26,26 @@
     <details class="mobile-nav"><summary aria-label="Open navigation">Menu</summary><nav aria-label="Mobile"><ul><li><a href="../index.html">← All demos</a></li><li><a href="../../index.html">Main site</a></li><li><a href="../../services.html">Services</a></li><li><a href="../../pricing.html">Pricing</a></li></ul></nav></details>
   </div>
 </header>
-<main id="main" tabindex="-1"><section class="hero hero--inner"><div class="container"><p class="label">SERVICE CATALOG DEMO</p><h1>AI Assistants</h1><p class="lead">A personal AI helper that supports your team with drafting, summarising and answering internal questions.</p><p class="tier-line">Starter ₹14,999 · Standard ₹29,999 · Custom quoted after scope</p><p><a class="btn btn--primary" href="#tiers">See price tiers</a></p></div>
+<main id="main" tabindex="-1"><section class="hero hero--inner"><div class="container"><p class="label">SERVICE CATALOG DEMO</p><h1>AI Assistants</h1><p class="lead">A personal AI helper that supports your team with drafting, summarising and answering internal questions.</p><p class="tier-line">Starter ₹14,999 · Standard ₹29,999 · Custom — quoted after scope</p><p><a class="btn btn--primary" href="#interactive">Try the interactive demo</a> <a class="btn btn--secondary" href="#tiers">See price tiers</a></p></div>
     <aside class="hero-side" aria-label="Engagement facts"><p class="label">PRICE ANCHORS</p><dl><dt>Starter</dt><dd>₹14,999</dd><dt>Standard</dt><dd>₹29,999</dd><dt>Custom</dt><dd>Quoted</dd><dt>Owner</dt><dd>AI Solutions Lead</dd></dl><p class="hero-side-note">Category: Application / Business. Scope agreed before work.</p></aside></section>
+    
+<section class="section demo-stage" id="interactive" aria-labelledby="interactive-title" data-testid="demo-widget" data-demo-slug="ai-assistants">
+  <div class="container">
+    <p class="label">INTERACTIVE DEMO</p>
+    <h2 id="interactive-title">Try the simulation in your browser</h2>
+    <p class="demo-disclosure"><strong>Interactive demo · Scripted simulation. No live AI, backend, or database is connected. Your input is handled by fixed rules in this browser tab and is not saved or sent anywhere.</strong></p>
+    <div class="demo-controls">
+      <label class="demo-label" for="assistant-input">Ask a scripted question</label>
+      <input class="demo-input" id="assistant-input" data-demo-input type="text" maxlength="200" placeholder="Try: what services do you offer?">
+      <button class="btn btn--primary demo-btn" type="button" data-demo-action="assistant-submit">Send (scripted)</button>
+      <button class="btn btn--secondary demo-btn" type="button" data-demo-action="assistant-ask" data-value="What is the price?">What is the price?</button>
+      <button class="btn btn--secondary demo-btn" type="button" data-demo-action="assistant-ask" data-value="How long does it take?">How long does it take?</button></div>
+    <p class="demo-output" data-testid="demo-output" role="status" aria-live="polite">Choose an option to begin.</p>
+    <p class="demo-inpane">Illustrative example — responses are prewritten, not AI-generated.</p>
+    <p class="form-note">Demo form only. Submitting does not create a lead, open a ticket, send an email, or store anything. No data is transmitted.</p>
+    <button class="btn btn--secondary" type="button" data-demo-reset>Reset demo</button>
+  </div>
+</section>
     <section class="section"><div class="container"><p class="label">01</p><h2>Service definition</h2><div class="grid-cards"><article class="card"><h3>Business value</h3><p>Reduces repetitive admin work and gives staff faster access to information.</p></article><article class="card"><h3>Target users</h3><p>Knowledge workers, small teams and managers wanting practical AI help.</p></article><article class="card"><h3>Service owner</h3><p>AI Solutions Lead (Application / Business)</p></article></div></div></section>
     <section class="section" id="tiers"><div class="container"><p class="label">PRICE TIERS</p><h2>Three clear ways to start</h2><div class="grid-cards"><article class="card tier-card"><p class="label">Starter</p><h3>₹14,999</h3><p><strong>Included:</strong> Basic assistant setup, limited use cases, onboarding.</p><p><strong>Limits:</strong> Predefined use cases; standard tools only.</p><p><strong>Timeline:</strong> Shortest — defined at request review.</p></article><article class="card tier-card tier-card--featured"><p class="label">Standard</p><h3>₹29,999</h3><p><strong>Included:</strong> Multiple use cases, light customisation, team onboarding.</p><p><strong>Limits:</strong> No proprietary data training.</p><p><strong>Timeline:</strong> Moderate — defined at request review.</p></article><article class="card tier-card"><p class="label">Custom</p><h3>Quoted after scope</h3><p><strong>Included:</strong> Bespoke workflows, data connections, advanced configuration.</p><p><strong>Limits:</strong> Scoped and agreed before work begins.</p><p><strong>Timeline:</strong> Agreed with client after scoping.</p></article></div><p class="muted">Introductory, one-time pricing. Domain, hosting, third-party subscriptions and paid licences are excluded. Scope is agreed before work starts.</p></div></section>
     <section class="section"><div class="container"><p class="label">02</p><h2>Request and fulfilment</h2><div class="grid-cards"><article class="card"><h3>Flow</h3><p>Submit request → Use-case & scope confirmation → Approval → Configuration → User onboarding → Handover → Close request</p></article><article class="card"><h3>Exclusions</h3><p>Model subscription/API costs, proprietary model training, ongoing usage management, content creation, hardware, out-of-scope features.</p></article><article class="card"><h3>Change control</h3><p>Any change after scope approval is logged, reviewed and approved before implementation. Unapproved changes to a live service are not permitted.</p></article></div></div></section>
