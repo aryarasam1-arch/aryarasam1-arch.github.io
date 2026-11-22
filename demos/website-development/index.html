@@ -13,8 +13,9 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Hermes Biz">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../../styles.css?v=1.0.5">
-<script src="../../app.js?v=1.0.5" defer></script>
+<link rel="stylesheet" href="../../styles.css?v=1.0.6">
+<script src="../../app.js?v=1.0.6" defer></script>
+<script type="module" src="../../assets/3d/website-development.js"></script>
 </head>
 <body>
 <div class="demo-notice" role="note">Service catalog demo · illustrative content · no live bookings, no data saved.</div>
@@ -29,21 +30,28 @@
 <main id="main" tabindex="-1"><section class="hero hero--inner"><div class="container"><p class="label">SERVICE CATALOG DEMO</p><h1>Website Development</h1><p class="lead">A business website: the pages, layout and working parts customers use to find you and get in touch.</p><p class="tier-line">Starter ₹14,999 · Standard ₹29,999 · Custom — quoted after scope</p><p><a class="btn btn--primary" href="#interactive">Try the interactive demo</a> <a class="btn btn--secondary" href="#tiers">See price tiers</a></p></div>
     <aside class="hero-side" aria-label="Engagement facts"><p class="label">PRICE ANCHORS</p><dl><dt>Starter</dt><dd>₹14,999</dd><dt>Standard</dt><dd>₹29,999</dd><dt>Custom</dt><dd>Quoted</dd><dt>Owner</dt><dd>Web & Digital Delivery Lead</dd></dl><p class="hero-side-note">Category: Application / Business. Scope agreed before work.</p></aside></section>
     
-<section class="section demo-stage" id="interactive" aria-labelledby="interactive-title" data-testid="demo-widget" data-demo-slug="website-development">
+<section class="section demo-stage three-stage" id="interactive" aria-labelledby="three-title" data-testid="demo-widget" data-demo-slug="website-development-3d">
   <div class="container">
-    <p class="label">INTERACTIVE DEMO</p>
-    <h2 id="interactive-title">Try the simulation in your browser</h2>
-    <p class="demo-disclosure"><strong>Interactive demo · Scripted simulation. No live AI, backend, or database is connected. Your input is handled by fixed rules in this browser tab and is not saved or sent anywhere.</strong></p>
-    <div class="demo-controls">
-      <button class="btn btn--secondary demo-btn" type="button" data-demo-action="site-view" data-value="home">View Home page</button>
-      <button class="btn btn--secondary demo-btn" type="button" data-demo-action="site-view" data-value="services">View Services page</button>
-      <button class="btn btn--secondary demo-btn" type="button" data-demo-action="site-view" data-value="contact">View Contact page</button>
-      <button class="btn btn--secondary demo-btn" type="button" data-demo-action="site-theme" data-value="green">Theme: Green</button>
-      <button class="btn btn--secondary demo-btn" type="button" data-demo-action="site-theme" data-value="amber">Theme: Amber</button></div>
-    <p class="demo-output" data-testid="demo-output" role="status" aria-live="polite">Choose an option to begin.</p>
-    <p class="demo-inpane">Illustrative example — responses are prewritten, not AI-generated.</p>
-    <p class="form-note">Demo form only. Submitting does not create a lead, open a ticket, send an email, or store anything. No data is transmitted.</p>
-    <button class="btn btn--secondary" type="button" data-demo-reset>Reset demo</button>
+    <p class="label">INTERACTIVE 3D PREVIEW</p>
+    <h2 id="three-title">See the website concept in 3D</h2>
+    <p class="demo-disclosure"><strong>Interactive 3D preview · Scripted simulation. No live AI, backend, database or code generation is connected. The rotating website mockup uses fixed content in this browser tab and is not saved or sent anywhere.</strong></p>
+    <div class="three-layout">
+      <div class="three-viewport-wrap">
+        <canvas id="website-3d-canvas" data-testid="three-canvas" tabindex="0" role="img" aria-label="Rotating 3D mockup of a business website with Home, Services and Contact views."></canvas>
+        <div class="three-hud" aria-hidden="true"><span class="label">SAMPLE WEBSITE MOCKUP</span><strong id="three-view-title">Home</strong></div>
+      </div>
+      <div class="three-panel">
+        <div class="demo-controls" aria-label="3D view controls">
+          <button class="btn btn--secondary demo-btn" type="button" data-view="0" aria-pressed="true">1 · Home</button>
+          <button class="btn btn--secondary demo-btn" type="button" data-view="1" aria-pressed="false">2 · Services</button>
+          <button class="btn btn--secondary demo-btn" type="button" data-view="2" aria-pressed="false">3 · Contact</button>
+        </div>
+        <p class="demo-output" id="three-status" data-testid="demo-output" role="status" aria-live="polite">Home view. Starter ₹14,999. Standard ₹29,999. Custom quoted after scope.</p>
+        <p class="demo-inpane">Illustrative example — responses are prewritten, not AI-generated.</p>
+        <p class="form-note">Drag to rotate, use arrow keys or 1/2/3, and press Home to reset. Reduced-motion users get a static view.</p>
+        <button class="btn btn--secondary" type="button" data-demo-reset>Reset view</button>
+      </div>
+    </div>
   </div>
 </section>
     <section class="section"><div class="container"><p class="label">01</p><h2>Service definition</h2><div class="grid-cards"><article class="card"><h3>Business value</h3><p>A credible always-on presence that explains what you offer and turns visitors into enquiries.</p></article><article class="card"><h3>Target users</h3><p>Owners and marketing staff at small and growing businesses.</p></article><article class="card"><h3>Service owner</h3><p>Web & Digital Delivery Lead (Application / Business)</p></article></div></div></section>
