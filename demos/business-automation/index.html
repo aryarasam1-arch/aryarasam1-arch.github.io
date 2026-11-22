@@ -13,8 +13,9 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Hermes Biz">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../../styles.css?v=1.0.5">
-<script src="../../app.js?v=1.0.5" defer></script>
+<link rel="stylesheet" href="../../styles.css?v=1.0.7">
+<script src="../../app.js?v=1.0.7" defer></script>
+
 </head>
 <body>
 <div class="demo-notice" role="note">Service catalog demo · illustrative content · no live bookings, no data saved.</div>
@@ -57,11 +58,11 @@
     <form class="form" data-demo-form novalidate>
       <p class="form-error" data-demo-error role="alert" hidden></p>
       <p class="form-note form-ok" data-demo-ok role="status" hidden>Demo only — no data was sent or saved.</p>
-      <div class="field"><label for="demo-name">Your name</label><input name="name" type="text" required minlength="2" maxlength="100" autocomplete="name"></div>
-      <div class="field"><label for="demo-business">Business</label><input name="business" type="text" required maxlength="120" autocomplete="organization"></div>
-      <div class="field"><label for="demo-interest">Interest</label><select name="interest" required><option value="">Choose a tier</option><option>Starter — ₹14,999</option><option>Standard — ₹29,999</option><option>Custom — quoted after scope</option></select></div>
-      <div class="field"><label for="demo-message">Message</label><textarea name="message" rows="4" required minlength="10" maxlength="1000"></textarea></div>
-      <div class="field checkbox"><input name="consent" type="checkbox" required><label for="demo-consent">I understand this is a demo and nothing is transmitted.</label></div>
+      <div class="field"><label for="demo-name">Your name</label><input id="demo-name" name="name" type="text" required minlength="2" maxlength="100" autocomplete="name"></div>
+      <div class="field"><label for="demo-business">Business</label><input id="demo-business" name="business" type="text" required maxlength="120" autocomplete="organization"></div>
+      <div class="field"><label for="demo-interest">Interest</label><select id="demo-interest" name="interest" required><option value="">Choose a tier</option><option>Starter — ₹14,999</option><option>Standard — ₹29,999</option><option>Custom — quoted after scope</option></select></div>
+      <div class="field"><label for="demo-message">Message</label><textarea id="demo-message" name="message" rows="4" required minlength="10" maxlength="1000"></textarea></div>
+      <div class="field checkbox"><input id="demo-consent" name="consent" type="checkbox" required><label for="demo-consent">I understand this is a demo and nothing is transmitted.</label></div>
       <button class="btn btn--primary" type="submit">Submit demo form</button>
       <p class="form-note">No fetch, no storage, no email, no WhatsApp.</p>
     </form>
