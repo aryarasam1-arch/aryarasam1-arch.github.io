@@ -1,14 +1,42 @@
-import * as THREE from './three.module.js';
+import * as THREE from './three.module.min.js';
 
 const canvas = document.getElementById('website-3d-canvas');
-if (canvas) {
-  const status = document.getElementById('three-status');
-  const viewTitle = document.getElementById('three-view-title');
-  const buttons = Array.from(document.querySelectorAll('[data-view]'));
-  const resetBtn = document.querySelector('[data-demo-reset]');
+const status = document.getElementById('three-status');
+const viewTitle = document.getElementById('three-view-title');
+const buttons = Array.from(document.querySelectorAll('[data-view]'));
+const resetBtn = document.querySelector('[data-demo-reset]');
 
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
-  renderer.setClearColor(0x07120e, 1);
+function showFallback(error) {
+  if (canvas) canvas.hidden = true;
+  const wrap = canvas ? canvas.closest('.three-viewport-wrap') : null;
+  if (wrap && !wrap.querySelector('.three-fallback')) {
+    const box = document.createElement('div');
+    box.className = 'three-fallback';
+    box.setAttribute('role', 'status');
+    const label = document.createElement('p');
+    label.className = 'label';
+    label.textContent = '3D PREVIEW UNAVAILABLE';
+    const note = document.createElement('p');
+    note.textContent = 'The interactive 3D view could not start in this browser. All service details and price tiers below remain available.';
+    box.appendChild(label);
+    box.appendChild(note);
+    wrap.appendChild(box);
+  }
+  if (status) status.textContent = '3D preview unavailable. Service details and price tiers below remain available.';
+  if (viewTitle) viewTitle.textContent = 'Unavailable';
+  if (window.console && console.warn) console.warn('3D preview disabled:', error);
+}
+
+if (canvas) {
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
+  } catch (error) {
+    showFallback(error);
+  }
+
+  if (renderer) {
+    renderer.setClearColor(0x07120e, 1);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x07120e);
@@ -87,13 +115,15 @@ if (canvas) {
   let dragging = false;
   let lastX = 0;
   let motion = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let autoSpin = motion;
   let paused = document.hidden;
 
   function setView(i, announce = true) {
     active = ((i % 3) + 3) % 3;
     target = -active * Math.PI * 2 / 3;
+    autoSpin = false;
     buttons.forEach((b, idx) => b.setAttribute('aria-pressed', String(idx === active)));
-    viewTitle.textContent = VIEWS[active].name;
+    if (viewTitle) viewTitle.textContent = VIEWS[active].name;
     if (announce && status) status.textContent = `${VIEWS[active].name} view. ${VIEWS[active].price}`;
   }
 
@@ -137,10 +167,14 @@ if (canvas) {
     requestAnimationFrame(animate);
     if (paused) return;
     const dt = Math.min(clock.getDelta(), 0.05);
-    if (!dragging && motion) group.rotation.y -= dt * 0.12;
-    if (!dragging && !motion) group.rotation.y += (target - group.rotation.y) * Math.min(1, dt * 8);
+    if (!dragging) {
+      if (autoSpin) group.rotation.y -= dt * 0.12;
+      else group.rotation.y += (target - group.rotation.y) * Math.min(1, dt * 8);
+    }
     camera.position.z += (zoom - camera.position.z) * Math.min(1, dt * 6);
     renderer.render(scene, camera);
   }
   animate();
+  }
 }
+
