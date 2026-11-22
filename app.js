@@ -21,3 +21,27 @@
     window.open(url,'_blank','noopener,noreferrer');
   });
 })();
+
+(function(){
+  var form=document.querySelector('[data-demo-form]');
+  if(!form) return;
+  var err=form.querySelector('[data-demo-error]');
+  var ok=form.querySelector('[data-demo-ok]');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(err) err.hidden=true;
+    if(ok) ok.hidden=true;
+    var data=new FormData(form);
+    var name=String(data.get('name')||'').trim();
+    var business=String(data.get('business')||'').trim();
+    var interest=String(data.get('interest')||'').trim();
+    var message=String(data.get('message')||'').trim();
+    var consent=data.get('consent');
+    if(name.length<2||!business||!interest||message.length<10||!consent){
+      if(err){err.hidden=false;err.textContent='Please complete all required fields.';}
+      return;
+    }
+    if(ok) ok.hidden=false;
+    form.reset();
+  });
+})();
