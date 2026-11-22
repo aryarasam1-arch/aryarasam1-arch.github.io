@@ -123,6 +123,38 @@ section{padding:clamp(52px,7vw,86px) 0}
 }
 .steps b{display:block;color:var(--txt);font-size:.96rem;margin-bottom:5px}
 
+/* ---------- professional six-stage process ---------- */
+.process{
+  padding-block:clamp(3rem,8vw,6rem);
+  padding-inline:clamp(1rem,4vw,2rem);
+  background:var(--bg-2);
+  border-block:1px solid var(--line);
+}
+.process__inner{width:100%;max-width:1200px;margin-inline:auto}
+.process__head{max-width:44rem;margin-bottom:clamp(2rem,5vw,3.5rem)}
+.process__eyebrow{margin:0 0 .75rem;color:var(--accent);font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.process__head h2{margin:0;font-size:clamp(1.75rem,4vw,2.5rem)}
+.process__lede{margin:.75rem 0 0;color:var(--muted);font-size:1rem;line-height:1.6}
+.process__steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:clamp(.75rem,2vw,1.25rem)}
+.process__step{
+  position:relative;display:flex;flex-direction:column;gap:.75rem;min-width:0;
+  padding:clamp(1.25rem,3vw,1.75rem);
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;
+}
+.process__step::before{content:"";position:absolute;top:-1px;left:clamp(1.25rem,3vw,1.75rem);width:2.25rem;height:2px;background:var(--accent);border-radius:0 0 2px 2px}
+.process__num{color:var(--accent);font-size:clamp(2rem,5vw,2.5rem);font-weight:800;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.process__step h3{margin:0;color:var(--txt);font-size:1.0625rem;font-weight:700}
+.process__desc{margin:0;color:var(--muted);font-size:.9rem;line-height:1.6}
+.process :is(a,button,[tabindex]):focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(min-width:540px){.process__steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:860px){.process__steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:1200px){.process__steps{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media(prefers-reduced-motion:no-preference){
+  .process__step{transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+  .process__step:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 32px rgba(0,0,0,.28)}
+}
+@media(prefers-reduced-motion:reduce){.process__step{transition:none}.process__step:hover{transform:none}}
+
 /* ---------- why ---------- */
 .why{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .why div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
