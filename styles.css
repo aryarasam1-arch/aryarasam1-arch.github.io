@@ -70,6 +70,19 @@ p{margin:0 0 1em}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
 .hero h1{max-width:19ch}
 .hero .lead{font-size:clamp(1.05rem,2.2vw,1.28rem);color:var(--muted);max-width:56ch;margin-bottom:30px}
+.hero-process{
+  display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px;padding:10px;
+  background:rgba(62,224,161,.06);border:1px solid rgba(62,224,161,.28);
+  border-radius:12px;max-width:760px;
+}
+.hero-process span{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:7px 11px;border-radius:8px;
+  background:var(--panel);border:1px solid var(--line);
+  color:var(--txt);font-size:.82rem;font-weight:600;white-space:nowrap;
+}
+.hero-process b{color:var(--accent);font-variant-numeric:tabular-nums;font-size:.78rem}
+
 .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:9px;
