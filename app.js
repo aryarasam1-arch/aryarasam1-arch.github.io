@@ -13,7 +13,8 @@
     var email=String(data.get('email')||'').trim();
     var service=String(data.get('service')||'').trim();
     var message=String(data.get('message')||'').trim();
-    if(name.length<2||!business||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||!service||message.length<10){
+    var consent=data.get('consent');
+    if(name.length<2||!business||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||!service||message.length<10||!consent){
       fail('Please complete all required fields with valid details.'); return;
     }
     var text='Hello HERMES BIZ,%0A%0AName: '+encodeURIComponent(name)+'%0ABusiness: '+encodeURIComponent(business)+'%0AEmail: '+encodeURIComponent(email)+'%0AService: '+encodeURIComponent(service)+'%0A%0AMessage: '+encodeURIComponent(message);
@@ -103,7 +104,7 @@
     }
   });
   var reset=w.querySelector('[data-demo-reset]');
-  if(reset) reset.addEventListener('click',function(){
+  if(reset && out && out.id !== 'three-status') reset.addEventListener('click',function(){
     if(input) input.value='';
     connectors=[];
     Array.prototype.forEach.call(w.querySelectorAll('[data-demo-action="connector"]'),function(x){x.setAttribute('aria-pressed','false');});
