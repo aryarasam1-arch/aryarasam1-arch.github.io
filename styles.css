@@ -66,6 +66,14 @@ a:hover{color:var(--color-signal-hover)}
 .form-error{background:var(--color-surface-2);border:1px solid var(--color-signal);color:var(--color-signal);padding:.75rem;border-radius:4px}
 .form-note{font-size:.85rem;color:var(--color-text-subtle)}
 .form-ok{color:var(--color-text);background:var(--color-surface-2);border:1px solid var(--color-border-strong);padding:.75rem;border-radius:4px}
+.demo-disclosure{background:var(--color-surface-2);border-left:3px solid var(--color-signal);padding:.9rem 1rem;margin:0 0 1.25rem;color:var(--color-text)}
+.demo-controls{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 1.25rem}
+.demo-btn{min-height:40px;padding:0 .85rem;font-size:.9rem}
+.demo-btn[aria-pressed="true"]{background:var(--color-signal);color:var(--color-signal-ink);border-color:var(--color-signal)}
+.demo-label{display:block;font-size:.9rem;font-weight:600;width:100%}
+.demo-input{width:100%;min-height:44px;background:var(--color-bg);color:var(--color-text);border:1px solid var(--color-border);border-radius:4px;padding:.7rem;font:inherit}
+.demo-output{min-height:72px;background:var(--color-bg);border:1px solid var(--color-border);border-radius:6px;padding:1rem;margin:0 0 1rem;white-space:pre-wrap;color:var(--color-text)}
+.demo-inpane{font-size:.85rem;color:var(--color-text-subtle);margin:0 0 .5rem}
 .demo-notice{background:var(--color-signal);color:var(--color-signal-ink);font-family:var(--font-mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;padding:.55rem 1rem;text-align:center}
 .tier-card--featured{border-color:var(--color-signal)}
 .tier-card h3{font-size:1.5rem;color:var(--color-signal)}
