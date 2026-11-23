@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Kora Roasters &amp; Kitchen — Concept Demo</title>
+<meta name="description" content="A fictional café website concept by HERMES BIZ. Warm cream and espresso tones, filterable menu, and honest local-only booking form.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23F6F0E6'/%3E%3Cpath d='M8 12h14v8a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5z' fill='none' stroke='%236E452B' stroke-width='2'/%3E%3Cpath d='M22 14h3a3 3 0 0 1 0 6h-3' fill='none' stroke='%236E452B' stroke-width='2'/%3E%3Cpath d='M12 6c0 2-1 3 0 5M17 6c0 2-1 3 0 5' stroke='%23B9763F' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="styles.css">
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="demo-bar demo-bar-top">
+  <div class="wrap bar-in">
+    <span>CONCEPT DEMO BY HERMES BIZ · FICTIONAL PRACTICE</span>
+    <span class="bar-links">
+      <a href="../../">← Back to hermesbiz.in</a>
+      <a href="https://wa.me/919989135087?text=Hi%20Hermes%20Biz%2C%20I%20would%20like%20a%20similar%20site.">Request Similar Site on WhatsApp</a>
+    </span>
+  </div>
+</div>
+
+<header class="head">
+  <div class="wrap head-in">
+    <a class="brand" href="#top" aria-label="Kora Roasters and Kitchen, back to top">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 12h14v8a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M22 14h3a3 3 0 0 1 0 6h-3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 6c0 2-1 3 0 5M17 6c0 2-1 3 0 5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      <span><b>Kora</b><small>ROASTERS & KITCHEN</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#menu">Menu</a><a href="#story">Story</a><a href="#hours">Hours</a><a href="#location">Location</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="head-cta" href="https://wa.me/919989135087?text=Hi%2C%20I%27d%20like%20to%20book%20a%20table%20at%20Kora%20Roasters%20%26%20Kitchen.">Book a table <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">ROASTERS & KITCHEN · CONCEPT DEMO</p>
+        <h1>Good mornings,<br>made <em>slowly.</em></h1>
+        <p class="lede">A fictional neighbourhood café for the first quiet hour of the day. Coffee brewed with patience, breakfast that does not rush, and a little space to linger.</p>
+        <div class="actions">
+          <a class="btn btn-dark" href="https://wa.me/919989135087?text=Hi%2C%20I%27d%20like%20to%20book%20a%20table%20at%20Kora%20Roasters%20%26%20Kitchen.">Book a table <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-line" href="#menu">See the menu</a>
+        </div>
+        <p class="fine">FICTIONAL CAFÉ · NO RESERVATIONS OR CUSTOMER RECORDS ARE HANDLED HERE.</p>
+      </div>
+      <aside class="hero-card reveal" aria-label="Café at a glance">
+        <p class="eyebrow">TODAY AT KORA</p>
+        <dl>
+          <div><dt>On the bar</dt><dd>Espresso, filter and cold brew</dd></div>
+          <div><dt>In the kitchen</dt><dd>Breakfast until 11:30</dd></div>
+          <div><dt>From the oven</dt><dd>Fresh bakes each morning</dd></div>
+          <div><dt>Hours</dt><dd>Mon–Sat 8:00–20:00</dd></div>
+        </dl>
+        <p class="card-note">Every detail here is illustrative for a fictional café.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="menu">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">01 / MENU</p>
+        <h2>A short, considered menu.</h2>
+        <p class="section-note">Switch between Coffee, Breakfast and Bakery. Items and prices are fictional examples.</p>
+      </div>
+      <div class="menu-tabs reveal" role="tablist" aria-label="Menu categories">
+        <button type="button" class="tab" id="tab-coffee" role="tab" aria-selected="true" aria-controls="menu-panel" data-menu="coffee">Coffee</button>
+        <button type="button" class="tab" id="tab-breakfast" role="tab" aria-selected="false" aria-controls="menu-panel" data-menu="breakfast">Breakfast</button>
+        <button type="button" class="tab" id="tab-bakery" role="tab" aria-selected="false" aria-controls="menu-panel" data-menu="bakery">Bakery</button>
+      </div>
+      <div class="menu-panel reveal" id="menu-panel" role="tabpanel" aria-labelledby="tab-coffee">
+        <p class="panel-note" id="menu-note">Coffee</p>
+        <ul class="items" id="menu-items">
+          <li><div><h3>Espresso</h3><p>Single origin, pulled short</p></div><span>₹120</span></li>
+          <li><div><h3>Flat white</h3><p>Double shot, silky milk</p></div><span>₹160</span></li>
+          <li><div><h3>Cold brew</h3><p>Steeped overnight, served black</p></div><span>₹170</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="story">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="eyebrow">02 / STORY</p>
+        <h2 class="section-title">A small room<br>with a long morning.</h2>
+      </div>
+      <div class="reveal">
+        <p>Kora Roasters & Kitchen is a fictional café created as an independent design study. It exists to show how a café website can feel warm and unhurried without stock photography or exaggerated claims.</p>
+        <p>We imagine a space where the barista knows the regular order, the kitchen writes the day's breakfast on a small board, and nobody is in a hurry to leave.</p>
+        <ul class="ticks"><li>Coffee brewed to order</li><li>A short menu, changed often</li><li>Room to read and stay awhile</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="hours">
+    <div class="wrap two-col">
+      <div class="reveal">
+        <p class="eyebrow">03 / HOURS</p>
+        <h2 class="section-title">When to find us.</h2>
+        <table class="hours">
+          <tbody>
+            <tr><th scope="row">Monday – Friday</th><td>8:00 – 20:00</td></tr>
+            <tr><th scope="row">Saturday</th><td>8:00 – 21:00</td></tr>
+            <tr><th scope="row">Sunday</th><td>9:00 – 16:00</td></tr>
+            <tr><th scope="row">Breakfast</th><td>Until 11:30 daily</td></tr>
+          </tbody>
+        </table>
+        <p class="fine">Illustrative hours for a fictional café. Bookings are not accepted on this demo site.</p>
+      </div>
+      <div class="reveal" id="location">
+        <p class="eyebrow">04 / LOCATION</p>
+        <h2 class="section-title">A place to picture.</h2>
+        <div class="map-placeholder" role="img" aria-label="Abstract location map illustration">
+          <svg viewBox="0 0 320 200" aria-hidden="true"><rect x="0" y="0" width="320" height="200" fill="#EFE4D5"/><path d="M0 60h320M0 140h320M80 0v200M210 0v200M150 0v200" stroke="#D8C6AE" stroke-width="3" fill="none"/><path d="M60 170L120 40l90 100z" fill="none" stroke="#B9763F" stroke-width="2"/><circle cx="168" cy="110" r="10" fill="#6E452B"/><circle cx="168" cy="110" r="4" fill="#F6F0E6"/><text x="14" y="30" fill="#6E452B" font-size="11" font-family="sans-serif" letter-spacing="2">FICTIONAL LOCATION</text></svg>
+        </div>
+        <p class="fine">Fictional café — no real address is provided on this demo site.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">05 / CONTACT</p>
+        <h2 class="section-title">Book a table<br>the easy way.</h2>
+        <p class="lede">Send a table request on WhatsApp, or use the demo form below. The form validates locally and stores or transmits nothing.</p>
+        <a class="btn btn-gold" href="https://wa.me/919989135087?text=Hi%2C%20I%27d%20like%20to%20book%20a%20table%20at%20Kora%20Roasters%20%26%20Kitchen.">Book a table <span aria-hidden="true">↗</span></a>
+        <p class="fine">Fictional café — no address or phone number is provided.</p>
+      </div>
+      <form class="form reveal" id="contact-form" novalidate>
+        <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="c-email">Email address</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field-row">
+          <div class="field"><label for="c-date">Preferred date</label><input id="c-date" name="date" type="date" required></div>
+          <div class="field"><label for="c-guests">Guests</label>
+            <select id="c-guests" name="guests" required><option value="">Choose</option><option>1</option><option>2</option><option>3</option><option>4+</option></select>
+          </div>
+        </div>
+        <div class="field"><label for="c-note">Anything we should know?</label><textarea id="c-note" name="note" placeholder="Optional."></textarea></div>
+        <label class="check"><input type="checkbox" id="c-consent" required><span>I agree to be contacted about this request.</span></label>
+        <button class="btn btn-gold" type="submit">Send request</button>
+        <p class="status" id="form-status" role="status" aria-live="polite"></p>
+        <p class="fine">Demo only — nothing is transmitted or stored.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="demo-bar demo-bar-bottom">
+  <div class="wrap bar-in">
+    <span>CONCEPT DEMO BY HERMES BIZ · FICTIONAL PRACTICE</span>
+    <span class="bar-links">
+      <a href="../../">← Back to hermesbiz.in</a>
+      <a href="https://wa.me/919989135087?text=Hi%20Hermes%20Biz%2C%20I%20would%20like%20a%20similar%20site.">Request Similar Site on WhatsApp</a>
+    </span>
+  </div>
+</div>
+
+</body>
+</html>
