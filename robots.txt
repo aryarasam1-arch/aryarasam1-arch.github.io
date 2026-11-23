@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://hermesbiz.in/sitemap.xml
