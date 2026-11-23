@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Artha Wealth Advisory — Concept Demo</title>
+<meta name="description" content="A fictional wealth advisory concept by HERMES BIZ. Includes an illustrative SIP projection tool and a local-only demo form. Not financial advice.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23173024'/%3E%3Cpath d='M7 22h18M7 17l6-6 4 4 8-8' fill='none' stroke='%23C9A24B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="styles.css">
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="demo-bar demo-bar-top">
+  <div class="wrap bar-in">
+    <span>CONCEPT DEMO BY HERMES BIZ · FICTIONAL PRACTICE</span>
+    <span class="bar-links">
+      <a href="../../">← Back to hermesbiz.in</a>
+      <a href="https://wa.me/919989135087?text=Hi%20Hermes%20Biz%2C%20I%20would%20like%20a%20similar%20site.">Request Similar Site on WhatsApp</a>
+    </span>
+  </div>
+</div>
+
+<header class="head">
+  <div class="wrap head-in">
+    <a class="brand" href="#top" aria-label="Artha Wealth Advisory, back to top">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 22h18M7 17l6-6 4 4 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span><b>Artha</b><small>WEALTH ADVISORY</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#services">Services</a><a href="#calculator">Projection</a>
+      <a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="head-cta" href="https://wa.me/919989135087?text=Hi%2C%20I%27d%20like%20to%20request%20a%20portfolio%20review%20with%20Artha%20Wealth%20Advisory.">Request a review <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">WEALTH ADVISORY · CONCEPT DEMO</p>
+        <h1>Quiet numbers,<br>carefully <em>read.</em></h1>
+        <p class="lede">A fictional advisory practice for people who would rather understand their numbers than be dazzled by them. Every detail on this page is illustrative.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="https://wa.me/919989135087?text=Hi%2C%20I%27d%20like%20to%20request%20a%20portfolio%20review%20with%20Artha%20Wealth%20Advisory.">Request a review <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-line" href="#calculator">Try the projection</a>
+        </div>
+        <p class="fine">FICTIONAL PRACTICE · NO FINANCIAL ADVICE IS GIVEN ON THIS DEMO SITE.</p>
+      </div>
+      <aside class="hero-card reveal" aria-label="Practice at a glance">
+        <p class="eyebrow">AT A GLANCE</p>
+        <dl>
+          <div><dt>Planning</dt><dd>Goals set in plain language</dd></div>
+          <div><dt>Records</dt><dd>Holdings explained, not hidden</dd></div>
+          <div><dt>Reviews</dt><dd>Scheduled, unhurried conversations</dd></div>
+          <div><dt>Approach</dt><dd>Understand before you act</dd></div>
+        </dl>
+        <p class="card-note">No client figures, registrations or credentials are represented.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">01 / SERVICES</p>
+        <h2>Four ways we<br>help you look.</h2>
+        <p class="section-note">An illustrative service list for a fictional practice. Nothing here describes products, fees or performance.</p>
+      </div>
+      <ol class="services">
+        <li class="reveal"><span>01</span><div><h3>Financial planning</h3><p>Long-term goals written down in ordinary language, with the trade-offs stated plainly.</p></div></li>
+        <li class="reveal"><span>02</span><div><h3>Portfolio review</h3><p>A careful reading of what you already hold, and a note of anything that needs a second look.</p></div></li>
+        <li class="reveal"><span>03</span><div><h3>Records & reporting</h3><p>Tidy statements and a clear summary you can actually read a year later.</p></div></li>
+        <li class="reveal"><span>04</span><div><h3>Second opinions</h3><p>An independent look at an existing plan, with the reasoning explained in writing.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section alt" id="calculator">
+    <div class="wrap calc-grid">
+      <div class="reveal">
+        <p class="eyebrow">02 / SIP PROJECTION</p>
+        <h2 class="section-title">A simple illustration.</h2>
+        <p class="lede">Enter a monthly amount, an assumed annual figure and a duration. The tool computes a projection from those inputs alone — nothing else.</p>
+        <p class="notice">Illustrative only — not financial advice and not a guarantee of returns.</p>
+        <a class="btn btn-gold" href="https://wa.me/919989135087?text=Hi%2C%20I%27d%20like%20to%20request%20a%20portfolio%20review%20with%20Artha%20Wealth%20Advisory.">Ask for a review on WhatsApp <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="calc-widget reveal">
+        <form id="sip-form" novalidate>
+          <div class="field">
+            <label for="sip-monthly">Monthly amount (₹)</label>
+            <input id="sip-monthly" name="monthly" type="number" min="500" max="1000000" step="500" value="10000" inputmode="numeric" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="sip-rate">Assumed annual figure (%)</label>
+              <input id="sip-rate" name="rate" type="number" min="1" max="30" step="0.5" value="12" inputmode="decimal" required>
+            </div>
+            <div class="field">
+              <label for="sip-years">Years</label>
+              <input id="sip-years" name="years" type="number" min="1" max="40" step="1" value="10" inputmode="numeric" required>
+            </div>
+          </div>
+          <button class="btn btn-dark" type="submit">Compute projection</button>
+          <p class="result-error" id="sip-error" role="alert"></p>
+        </form>
+        <div class="result" id="sip-result" role="status" aria-live="polite">
+          <p class="result-label">Projected corpus</p>
+          <p class="result-value" id="sip-corpus">₹23,23,391</p>
+          <dl class="result-detail">
+            <div><dt>Invested over 10 years</dt><dd id="sip-invested">₹12,00,000</dd></div>
+            <div><dt>Illustrative difference</dt><dd id="sip-gain">₹11,23,391</dd></div>
+          </dl>
+          <p class="result-note">Computed from the inputs above at a monthly compounding approximation. It is a projection, not a forecast, and it assumes the stated figure holds for the entire period.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark" id="approach">
+    <div class="wrap approach-grid">
+      <div class="reveal">
+        <p class="eyebrow">03 / APPROACH</p>
+        <h2 class="section-title">Explain first,<br>then act.</h2>
+      </div>
+      <div class="reveal">
+        <p>We would rather have a shorter conversation that you understand than a longer one that sounds impressive. Each review ends with a written summary of what was discussed and what remains open.</p>
+        <p>Fees and scope are set out before any work begins. If something is unclear, we go back to the beginning together.</p>
+        <ul class="ticks">
+          <li>Plain-language summaries</li><li>Written scope before work</li><li>No performance claims</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="eyebrow">04 / ABOUT</p>
+        <h2 class="section-title">A practice,<br>not a promise.</h2>
+      </div>
+      <div class="reveal">
+        <p>Artha Wealth Advisory is a fictional practice created as an independent design study. It exists to show how an advisory website can be calm and useful without client figures, rankings or forward-looking claims.</p>
+        <p>The projection tool on this page is a demonstration of interactivity only. It does not model taxes, fees, market behaviour or any specific product.</p>
+        <p class="fine">No registrations, credentials or figures about clients are represented anywhere on this page.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">05 / CONTACT</p>
+        <h2 class="section-title">Begin with a<br>review request.</h2>
+        <p class="lede">Ask on WhatsApp, or use the demo form below. The form validates locally and stores or transmits nothing.</p>
+        <a class="btn btn-gold" href="https://wa.me/919989135087?text=Hi%2C%20I%27d%20like%20to%20request%20a%20portfolio%20review%20with%20Artha%20Wealth%20Advisory.">Request a review <span aria-hidden="true">↗</span></a>
+        <p class="fine">Fictional practice — no address, phone number or registration is provided.</p>
+      </div>
+      <form class="form reveal" id="contact-form" novalidate>
+        <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="c-email">Email address</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="c-topic">Topic</label>
+          <select id="c-topic" name="topic" required><option value="">Choose one</option><option>Portfolio review</option><option>Financial planning</option><option>Records & reporting</option><option>Second opinion</option></select>
+        </div>
+        <div class="field"><label for="c-note">Message</label><textarea id="c-note" name="note" required placeholder="A sentence or two is enough."></textarea></div>
+        <label class="check"><input type="checkbox" id="c-consent" required><span>I agree to be contacted about this enquiry.</span></label>
+        <button class="btn btn-dark" type="submit">Send enquiry</button>
+        <p class="status" id="form-status" role="status" aria-live="polite"></p>
+        <p class="fine">Demo only — nothing is transmitted or stored.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="demo-bar demo-bar-bottom">
+  <div class="wrap bar-in">
+    <span>CONCEPT DEMO BY HERMES BIZ · FICTIONAL PRACTICE</span>
+    <span class="bar-links">
+      <a href="../../">← Back to hermesbiz.in</a>
+      <a href="https://wa.me/919989135087?text=Hi%20Hermes%20Biz%2C%20I%20would%20like%20a%20similar%20site.">Request Similar Site on WhatsApp</a>
+    </span>
+  </div>
+</div>
+
+</body>
+</html>
